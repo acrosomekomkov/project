@@ -1,0 +1,57 @@
+@media (max-width: 768px)
+    ul,li 
+        padding: 0
+        margin: 0
+    .menu
+        position: relative
+        &_list
+            position: fixed
+            flex-direction: column
+            width: 50%
+            height: 100vh
+            top: 0
+            left: -100%
+            background-color: rgba(0,0,0,.8)
+            justify-content: center
+            align-items: center
+            padding-left: 20px
+            
+            &_item 
+                padding: 10px 0
+                display: block
+                border-right: none
+                text-align: center
+                &:after 
+                    content: ''
+                    display: block
+                    width: 0%
+                    height: 2px
+                    background-color: black
+                    transition: 0.5s all
+                &:hover 
+                    &:after
+                       width: 100%    
+    .hamburger 
+        display: block
+        position: absolute 
+        right: 20px
+        top: 50%
+        transform: translateY(-50%)
+        width: 26px
+        height: 12px
+        span 
+            display: block
+            height: 2px
+            width: 100%
+            background-color: white
+            margin-bottom: 2px
+            transition: 1s all
+        &_active 
+            span
+                margin-bottom: -2px
+                &:nth-child(1)
+                    transform: rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: rotate(45deg)
